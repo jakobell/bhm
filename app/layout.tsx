@@ -1,15 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import type { Metadata } from "next"
+import { Inter, Space_Grotesk } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { AmbientBackground } from "@/components/shared/ambient-background"
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-inter",
+  display: "swap",
 })
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+})
+
+export const metadata: Metadata = {
+  title: "BHM Studios",
+  description:
+    "BHM Studios is a founder-led software and digital product agency combining a central studio presence with immersive individual founder portfolios.",
+}
 
 export default function RootLayout({
   children,
@@ -20,10 +32,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased dark`}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="relative min-h-svh overflow-x-hidden">
+        <ThemeProvider>
+          <AmbientBackground />
+          <div className="relative z-10">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   )
