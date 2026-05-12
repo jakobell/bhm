@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowUpRight, MapPin } from "lucide-react"
 
 import { GlassPanel } from "@/components/shared/glass-panel"
@@ -24,8 +25,6 @@ export function FounderHero({
   experience,
   onBackToAgency,
 }: FounderHeroProps) {
-  const portraitMonogram = founder.fullName.slice(0, 1)
-
   return (
     <LightBorderCard className="rounded-[2.2rem]">
       <div className="grid gap-8 xl:grid-cols-[1.05fr_0.95fr]">
@@ -119,8 +118,19 @@ export function FounderHero({
                   {experience.portraitLabel}
                 </div>
                 <div className="flex justify-center py-8">
-                  <div className={cn(experience.portraitShellClassName)}>
-                    {portraitMonogram}
+                  <div
+                    className={cn(
+                      "relative overflow-hidden",
+                      experience.portraitShellClassName
+                    )}
+                  >
+                    <Image
+                      src={founder.portrait.src}
+                      alt={founder.portrait.alt}
+                      fill
+                      sizes="(min-width: 1280px) 28rem, 70vw"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
                 <div className="rounded-[1.35rem] border border-white/10 bg-black/10 p-4">

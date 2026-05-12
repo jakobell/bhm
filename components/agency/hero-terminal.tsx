@@ -139,8 +139,11 @@ function CommandBlock({
         ))}
       </div>
 
-      {!isLast && <AnimatedSpan className="block h-3" />}
-    </div>
+      {!isLast && (
+        <AnimatedSpan className="block h-3">
+          {" "}
+        </AnimatedSpan>
+      )}    </div>
   )
 }
 
@@ -185,12 +188,8 @@ export function HeroTerminal({ className }: { className?: string }) {
           "backdrop-blur-2xl"
         )}
       >
-        <AnimatedSpan className="mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
-          <span className="h-3 w-3 rounded-full bg-red-400/80" />
-          <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
-          <span className="h-3 w-3 rounded-full bg-green-400/80" />
-
-          <span className="ml-3 hidden font-mono text-[0.68rem] text-white/34 sm:inline">
+        <AnimatedSpan className="mb-4 flex items-center border-b border-white/10 pb-3">
+          <span className="hidden font-mono text-[0.68rem] text-white/34 sm:inline">
             bhm — strategic-runtime
           </span>
         </AnimatedSpan>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 
 import { LightBorderCard } from "@/components/shared/light-border-card"
@@ -16,6 +17,17 @@ export function FounderPreviewCard({
   return (
     <LightBorderCard className="h-full rounded-[1.9rem]">
       <div className="flex h-full flex-col gap-6">
+        <div className="relative h-64 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04]">
+          <Image
+            src={founder.portrait.src}
+            alt={founder.portrait.alt}
+            fill
+            sizes="(min-width: 1280px) 24rem, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#050b13] via-[#050b13]/60 to-transparent" />
+        </div>
+
         <div className="space-y-3">
           <p className="text-[0.68rem] tracking-[0.22em] text-white/42 uppercase">
             Founder

@@ -29,8 +29,8 @@ export const founders: FounderProfile[] = [
     workingStyle:
       "Calm, structured, and detail-aware, with a preference for decisions that improve both present delivery and long-term maintainability.",
     portrait: {
-      src: "/images/founders/huetter-portrait.jpg",
-      alt: "Portrait placeholder for H\u00FCtter",
+      src: "/hütter.png",
+      alt: "Portrait of H\u00FCtter",
     },
     skills: [
       {
@@ -92,8 +92,8 @@ export const founders: FounderProfile[] = [
     workingStyle:
       "Thoughtful, highly detail-oriented, and collaborative, with strong sensitivity for pacing, hierarchy, and product feel.",
     portrait: {
-      src: "/images/founders/baar-portrait.jpg",
-      alt: "Portrait placeholder for Baar",
+      src: "/baar.png",
+      alt: "Portrait of Baar",
     },
     skills: [
       {
@@ -155,8 +155,8 @@ export const founders: FounderProfile[] = [
     workingStyle:
       "Methodical, solution-oriented, and pragmatic, with strong attention to edge cases, resilience, and operational usefulness.",
     portrait: {
-      src: "/images/founders/munz-portrait.jpg",
-      alt: "Portrait placeholder for Munz",
+      src: "/munz.png",
+      alt: "Portrait of Munz",
     },
     skills: [
       {
