@@ -1,4 +1,5 @@
 import { GlassPanel } from "@/components/shared/glass-panel"
+import { BrandLogo } from "@/components/shared/brand-logo"
 import { IdentitySwitcher } from "@/components/navigation/identity-switcher"
 import type { IdentityId, NavigationIdentity } from "@/types/content"
 
@@ -25,14 +26,22 @@ export function FloatingNavbar({
         >
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="min-w-0">
-              <p className="text-[0.68rem] tracking-[0.24em] text-white/44 uppercase">
-                Identity Carousel
-              </p>
-              <div className="mt-1 flex flex-wrap items-end gap-x-3 gap-y-1">
-                <p className="text-base font-medium text-white sm:text-lg">
-                  {activeIdentity.label}
-                </p>
-                <p className="text-sm text-white/54">{activeIdentity.description}</p>
+              <div className="flex flex-wrap items-center gap-4">
+                  <BrandLogo className="h-9 w-[7.0rem]" />
+
+                <div className="min-w-0">
+                  <p className="text-[0.68rem] tracking-[0.24em] text-white/44 uppercase">
+                    Identity Carousel
+                  </p>
+                  <div className="mt-1 flex flex-wrap items-end gap-x-3 gap-y-1">
+                    <p className="text-base font-medium text-white sm:text-lg">
+                      {activeIdentity.label}
+                    </p>
+                    <p className="text-sm text-white/54">
+                      {activeIdentity.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

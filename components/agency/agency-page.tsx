@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/agency/project-card"
 import { ServiceCard } from "@/components/agency/service-card"
 import { CTASection } from "@/components/shared/cta-section"
 import { GlassPanel } from "@/components/shared/glass-panel"
+import { BrandLogo } from "@/components/shared/brand-logo"
 import { LightBorderCard } from "@/components/shared/light-border-card"
 import { SectionHeader } from "@/components/shared/section-header"
 import { StudioButton } from "@/components/shared/studio-button"
@@ -63,6 +64,13 @@ export function AgencyPage({ onSelectIdentity }: AgencyPageProps) {
 
         <div className="relative z-10 grid gap-8 xl:min-h-[50rem] xl:grid-cols-[0.86fr_1.14fr] xl:gap-10">
           <div className="space-y-8 xl:max-w-[38rem] xl:py-6">
+            <div className="inline-flex items-center gap-3 rounded-full border border-[color:var(--brand-accent-border)] bg-white/[0.04] px-3.5 py-2 accent-glow">
+              <BrandLogo className="h-5 w-[4.8rem]" />
+              <span className="text-[0.68rem] tracking-[0.2em] text-white/54 uppercase">
+                Founder-led digital studio
+              </span>
+            </div>
+
             <SectionHeader
               titleId="agency-hero-heading"
               eyebrow="BHM Studios"
@@ -373,7 +381,10 @@ export function AgencyPage({ onSelectIdentity }: AgencyPageProps) {
 
       <footer className="rounded-[2rem] border border-white/8 bg-white/[0.03] px-5 py-5 text-sm text-white/48 sm:px-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p>{agency.name}</p>
+          <div className="flex items-center gap-3">
+            <BrandLogo className="h-5 w-[4.7rem]" />
+            <p>{agency.name}</p>
+          </div>
           <p>
             Software, digital products, and premium experiences by H{"\u00FC"}tter,
             Baar, and Munz.
