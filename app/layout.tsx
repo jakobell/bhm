@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   title: "BHM Studios",
   description:
     "BHM Studios is a founder-led software and digital product agency combining a central studio presence with immersive individual founder portfolios.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
