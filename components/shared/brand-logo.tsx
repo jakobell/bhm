@@ -32,21 +32,40 @@ export function BrandLogo({
     WebkitMaskSize: "contain",
   } satisfies CSSProperties
 
-  return (
+return (
+  <div
+    className={cn(
+      "relative isolate inline-flex h-7 w-[6.5rem] shrink-0 items-center justify-center",
+      className
+    )}
+    aria-label="BHM Studios"
+    role="img"
+  >
+    <div className="absolute inset-[-16%] rounded-full bg-[radial-gradient(circle,var(--brand-accent-soft),transparent_72%)] blur-xl" />
+
     <div
-      className={cn(
-        "relative isolate inline-flex h-7 w-[6.5rem] shrink-0 items-center justify-center",
-        className
-      )}
-      aria-label="BHM Studios"
-      role="img"
+      aria-hidden="true"
+      className="relative z-10 h-full w-full overflow-hidden drop-shadow-[0_0_18px_rgba(104,226,255,0.22)]"
+      style={{
+        maskImage: "url('/logo_hbm.svg')",
+        maskRepeat: "no-repeat",
+        maskPosition: "center",
+        maskSize: "contain",
+        WebkitMaskImage: "url('/logo_hbm.svg')",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        WebkitMaskSize: "contain",
+      }}
     >
-      <div className="absolute inset-[-16%] rounded-full bg-[radial-gradient(circle,var(--brand-accent-soft),transparent_72%)] blur-xl" />
       <div
-        aria-hidden="true"
-        className="animate-aurora relative z-10 h-full w-full drop-shadow-[0_0_18px_rgba(104,226,255,0.22)]"
-        style={logoStyle}
+        className="animate-aurora absolute inset-[-40%]"
+        style={{
+          backgroundImage: `linear-gradient(135deg, ${colors.join(", ")}, ${colors[0]})`,
+          backgroundSize: "220% 220%",
+          animationDuration: `${10 / speed}s`,
+        }}
       />
     </div>
-  )
+  </div>
+)
 }
