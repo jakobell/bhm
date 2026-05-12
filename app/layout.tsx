@@ -23,11 +23,10 @@ export const metadata: Metadata = {
     "BHM Studios is a founder-led software and digital product agency combining a central studio presence with immersive individual founder portfolios.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "128x128" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
     ],
     shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    apple: "/favicon.png  ",
   },
 }
 
