@@ -43,7 +43,7 @@ export const founderExperiences: FounderExperienceProfile[] = [
     portraitShapeClassName:
       "rounded-[2.6rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.04))]",
     portraitShellClassName:
-      "flex h-52 w-36 items-center justify-center rounded-[999px] border border-white/12 bg-white/[0.06] text-7xl font-semibold tracking-[-0.06em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]",
+      "flex h-48 w-40 items-center justify-center rounded-[2rem] border border-white/12 bg-white/[0.06] text-7xl font-semibold tracking-[-0.06em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]",
     portraitGlowClassName:
       "bg-[radial-gradient(circle,rgba(255,255,255,0.2),rgba(168,190,255,0.18),transparent_72%)]",
     portraitAccentClassName:
