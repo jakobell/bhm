@@ -144,10 +144,10 @@ export function LayoutShell() {
         onSelect={updateIdentity}
       />
 
-      <section
-        aria-label="BHM Studios identity carousel"
-        className="studio-container flex min-h-svh flex-col justify-center pb-18 pt-34 sm:pb-20 sm:pt-38"
-      >
+        <section
+          aria-label="BHM Studios identity carousel"
+          className="studio-container flex min-h-[calc(100svh-7rem)] flex-col justify-center pb-18 pt-6 sm:pb-20 sm:pt-8"
+        >
         <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div aria-live="polite" className="space-y-2">
 

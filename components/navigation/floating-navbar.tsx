@@ -19,8 +19,8 @@ export function FloatingNavbar({
   onSelect,
 }: FloatingNavbarProps) {
   return (
-    <header className="sticky top-0 z-30 w-full pt-4 sm:pt-6">
-      <div className="studio-container">
+    <header className="sticky top-0 z-30 w-full py-4 sm:py-6">      
+    <div className="studio-container">
         <GlassPanel
           tone="strong"
           padding="sm"
